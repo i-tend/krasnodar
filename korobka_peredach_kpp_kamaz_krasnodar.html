@@ -1,0 +1,430 @@
+---
+layout: default_main
+title: Купить коробку передач КамАЗ КПП в наличии в Краснодаре - ЧелныАгрегатЦентр 
+description: Прайс-лист на КПП или коробки передач КАМАЗ 14, 141, 142, 15, 152, 152-ЯМЗ, 154, ZF 16S151, ZF 9S 1310. Низкие цены и наличие товара на складе. Для автомобилей евро 2, евро 3, евро
+metakeywords: Двигатели КамАЗ 740 и Cummins купить продажа цена стоимость новые оригинал евро 2, евро 3, евро, 6520, 4308, 65115, 65116, 65117, 5320, 5409, 6460, 5511, 55111, 4310, 53605, 43253, 43118, 54115
+---
+
+
+  <!-- Header Area wrapper Starts -->
+  <header id="header-wrap">
+    <div class="head h-100">
+      <div class="head__inner h-100">
+        <!-- Navbar Start -->
+        <nav class="navbar navbar-expand-lg bg-inverse fixed-top scrolling-navbar">
+          <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <a href="/" class="navbar-brand" style="display: contents; max-width:60%;">ЧелныАгрегатЦентр - Краснодар</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+              aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+              <i class="lni-menu"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+              <ul class="navbar-nav mr-auto w-100 justify-content-end clearfix" id="top-submenu">
+                <li class="nav-item active">
+                  <a class="nav-link" href="javascript:" onclick="$('html, body').animate({ scrollTop: 0}, 600);" >
+                    Начало
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#catalog">
+                    Каталог
+                  </a>
+                </li>
+               
+                <li class="nav-item">
+                  <a class="nav-link" href="#pricing">
+                    Цены
+                  </a>
+                </li>
+
+                <!-- задняя часть меню подгружается  -->
+                {% include top-submenu.html %}
+               
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <!-- Navbar End -->
+
+        <!-- Hero Area Start -->
+        <!-- Hero Area Start -->
+        <div id="hero-area" class="hero-area-bg">
+          <div class="container w-100">
+            <div class="row">
+              <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                <div class="contents">
+                  <ul>
+                    <li style="margin-bottom:0px;">
+                      <h1 class="title text-left w-100">Весь модельный ряд коробок передач</h1>
+                    </li>
+                    <li style="margin-top:0px;">
+                      <h2 class="title w-100">со склада в Краснодаре  </h2>
+                    </li>
+                    <li>&nbsp;</li>
+                    <li><i class="lni-check-mark-circle"></i>&nbsp;&nbsp;Быстрая доставка под заказ</li>
+                    <li><i class="lni-check-mark-circle"></i>&nbsp;&nbsp;В наличии в Краснодаре, Москве, Наб.Челнах</li>
+                    <li><i class="lni-check-mark-circle"></i>&nbsp;&nbsp;10 лет на рынке </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="col-md-4 col-xs-12 text-right">
+                {% capture data_group %}
+                  ["КПП 14", "КПП 141 ", "КПП 142", "КПП 15", "КПП 152", "КПП 152 ЯМЗ", "КПП 154", "КПП ZF 16S151", "КПП ZF 9S 1310"]
+                {% endcapture %}
+                {% capture data_list %}
+                  ["КПП 14", "КПП 141 ", "КПП 142", "КПП 15", "КПП 152", "КПП 152 ЯМЗ", "КПП 154", "КПП ZF 16S151", "КПП ZF 9S 1310"]
+                {% endcapture %}
+                {% include header_zakaz.html list=data_list group=data_group groups_only = "true" %}
+              </div>  
+              
+                   
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Hero Area End -->
+
+  </header>
+  <!-- Header Area wrapper End -->
+
+
+  <!-- Каталог коробок -->
+  <section id="catalog" class="section-padding">
+    <div class="container text-center">
+      <div class="section-header text-center">
+        <h1 class="section-title "> Коробки передач КамАЗ. КПП.</h1>
+        <div class="shape wow fadeInDown"></div>
+      </div>
+      <div class="row" id="models_container">
+        <!-- for item -->
+        {% for item in site.data.kpp %}
+          <div class="engine col-md-6 col-lg-6 col-xs-12">
+            <div class="row">
+              <div class="col-md-4">
+                <a href="#~" onclick="show_dvigatel_popup({{item.id}});" class="nal-link" data-toggle="modal">
+                  <img src="/assets/img/kpp/{{item.img}}" alt="{{item.name}}" class="img-thumbnail" style="border: none;" />
+                </a>
+              </div>
+              <div class="col-md-8">
+                <table class="table-card-sm text-left" style="">
+                  <tr>
+                    <td colspan="2">
+                      <a href="javascript:" onclick="show_dvigatel_popup({{ item.id }});" class="nal-link" data-toggle="modal">
+                        <span style="font-size:1.4em;">
+                          {{ item.name }}
+                        </span></a>
+                        <span style="color:gray;float: right;">{{ item.model }} </span>
+                    </td>
+                  </tr>
+                  {%- if item.price1 -%}
+                  <tr>
+                    <td>{{ item.price1_n }}</td>
+                    <td style="width:28%;text-align: right;"><span style="text-align: right;">{{ item.price1 }}р.</span></td>
+                  </tr>
+                  {%- endif -%}
+          
+                  {%- if item.price2 -%}
+                  <tr>
+                    <td>{{ item.price2_n }}</td>
+                    <td style="text-align: right;"><span>{{ item.price2 }}р.</span></td>
+                  </tr>
+                  {%- endif -%}
+          
+                  {%- if item.price3 -%}
+                  <tr>
+                    <td>{{ item.price3_n }}</td>
+                    <td style="text-align: right;"><span>{{ item.price3 }}р.</span></td>
+                  </tr>
+                  {%- endif -%}
+          
+                  {%- if item.prim -%}
+                  <tr>
+                    <td colspan="2"> для {{ item.prim }} </td>
+                  </tr>
+                  {%- endif -%}
+          
+                  <tr>
+                    <td colspan="2" style="font-size: 92%;">{{ item.desc }} 
+      
+                      {%- if item.url -%}
+                      <a href="/kamaz-inf/korobki-peredach-kpp/{{ item.url }}.html"> подробнее... </a>
+                      
+                      {%- endif -%}
+                  </td>
+                  </tr>
+                </table>
+          
+          
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+        
+      </div>
+
+      
+      <div class="row text-left articles">
+        <a href="#" class="btn btn-lg btn-primary"> Запросить предложение </a> 
+          <div class="col-md-1"></div>
+          <div class="col-md-10">
+
+            
+            <p></p>
+              
+                <div class="alert alert-info text-center">Мы всегда сможем подобрать Вам коробку по вашему бюджету:<br> 
+                      - новая оригинальная КПП, производства ПАО КамАЗ,
+                  <br> - качественный аналог производства г. Набережные Челны,<br> 
+                  - качественно восстановленная КПП после кап.ремонта из новых запчастей. 
+                  <br>
+                  <br>
+                  Сможем дать лучшую гарантию.<br> Нам доверяют более 5000 клиентов по всей России. 
+                  
+                </div>
+
+                <p>
+                    Внимание! На одних и тех же моделях автомобиля КамАЗ могут быть установлены совершенно разные коробки передач.
+                    Это может привести к тому, что покупатель может приобрести неподходящие элементы трансмиссии.
+                  </p>
+
+                <h3>Виды КПП КАМАЗ и основные характеристики.</h3>
+                
+                <p>Грузовики КАМАЗ комплектуются различными коробками переключения передач, которые производятся как отечественными, так и зарубежными
+                  изготовителями:</p>
+                  <ul><li>
+                    1. 14-я модель КПП КАМАЗ без делителя, 
+                  Устанавливается на грузовиках КАМАЗ старого образца. Имеет трехходовой вариант системы переключения, механизм приводится в действие дистанционным способом,
+                  посредством качающегося рычага. На рынке представлены такими видами как: 14.1700025 и 142.1700025
+                  </li>
+                  <li>2. 15-я модель представлена современной моделью КПП 152. Ею комплектуются автомобильные тягачи, которые
+                  функционируют в составе автопоездов. Механическая коробка состоит из десяти ступеней. Технологически выполнена
+                  объединением пяти ступенчатой коробки и делителя с двумя ступенями. Передний делитель дает возможность наличия 10-ти
+                  передних передач и 2 задних. Делитель приводится в действие пневматикой, срабатывает после нажатия специальной кнопки
+                  на рычаге. Переключение скоростей осуществляется дистанционно, основной элемент – качающийся рычаг.</li>
+                  <li>3. Модель 161 содержит 8 ступеней, коробка четырех ступенчатая. Обладает пониженными и прямыми передачами. 
+                    Это возможно благодаря совмещению коробки с демультипликатором, который имеет две ступени;</li>
+                  <li>4. ZF - производства Германии. Имеет ряд модификаций, представленных 6-ти, 9-ти и 16-ти ступенчатыми коробками.
+                  Изготавливаются на совместном российско-германском предприятии «ZF-KAMA». Эти коробки обладают повышенными характеристиками и
+                  параметрами касательно эксплуатационных показателей.</li>
+                  <li>5. КПП 154 КАМАЗ, бюджетный аналог импортной. Подходит для  всех двигателей с одно дисковым сцеплением. Маховик лепесткового типа.</li>
+                  </ul>
+<p></p>
+
+                <h3>Техническое обслуживание и ремонт.</h3>
+                <p>В процессе эксплуатации коробка передач требует качественного технического обслуживания и чистки узлов. 
+                <p>Периодичность замены масла в КПП КАМАЗ - не реже одного раза в год, либо после каждых 90 тыс.км.
+                 пробега. В случае эксплуатации грузовика с повышенными нагрузками, рекомендуется проводить замену чаще, 
+                  тем самым продлевая ресурс.
+                <p>Процедуру замены масла стоит производить непосредственно после выключения двигателя. Слив производится через сливные отверстия,
+                  расположенные в донной области. В моделях КПП 14 и 152 – нужно вывинтить пробки коробки и делителя, 161 – необходимо
+                  вывернуть фильтрующий элемент, ZF – снять заглушки с отверстий для контроля уровня.</p>
+                <p>Регулировке поддаются следующие параметры: - Величина зазора клапана; - Ход рычага переключения; 
+                  - Привод для переключения передач.</p>
+                <p>Износ деталей является наиболее распространенной причиной поломок и выхода из строя. Более интенсивно изнашиваются
+                  области соприкосновений составных деталей (зубчики шестеренок, составные части привода, а также подшипники). Данные
+                  элементы почти не поддаются ремонту, единственным правильные решением является замена.</p>
+                <p>Также на работоспособность влияют нарушения в регулировке рычага и привода, изменения величины зазора в клапане.
+                  Основной показатель отклонений – затруднение или невозможность включения передачи, блокировка рычага в одной позиции,
+                  произвольное выключение передачи. Подобные неполадки устраняются проведением необходимых регулировок.</p>
+                <p></p>
+                  <strong>Распространенные неисправности</strong>
+                  <p>- Затруднение включения передач в коробке - сцепление выключается не до конца(ведет), надо попробовать отрегулировать
+                    привод.<br />- Передачи отключаются - сбилась регулировка хождения рычага делителя, устраняется регулировкой<br />-
+                    Плохо включаются или самовольно отключаются передачи на ходу, причина может быть в нарушении регулировки
+                    дистанционного привода или крепление рычажных тяг ослабли.<br />- Плохо работают передачи в делителе, проверьте
+                    зазор на клапане включения.</p>
+                
+
+
+             
+                <p>Коробки передач для КАМАЗа неприхотливы, надежны, обладают длительным сроком службы. <br>
+                  Они легки в обслуживании, диагностике и ремонте, у них простой доступ к механизмам.<br>
+                  Обслуживание может проводиться без спецоборудования и помещений.
+                   При постоянном контроле КПП, своевременной замене масла и изношенных
+                  компонентов коробки передач, устанавливаемые на КАМАЗ, прослужат долго.</p>
+          
+                <p>
+                  
+                </p>
+ 
+                {% include kupite_u_nas.html %}
+
+                
+          </div>
+          <div class="w-100 text-center">
+            <a href="#" class="btn btn-lg btn-primary"> Запросить предложение </a> 
+          </div>
+        </div>
+    </div>
+  </section>
+
+
+  <script>
+    var mods;
+    $.getJSON("/data/kpp.json", function (json) {
+      mods = json;
+      if (mods == null || mods.length == 0) return;
+    });
+    function show_dvigatel_popup(id) {
+      var source = document.getElementById("dvigatel-popup-template").innerHTML;
+      var template = Handlebars.compile(source);
+      if (mods == null || mods.length == 0) return;
+      var rez = mods.find(x => x.id == id);
+      if (rez != null) {
+        var html = template(rez);
+        $("#popup_container").html("");
+        $("#popup_container").append(html);
+        $('#engineModal_one').modal('show');
+      }
+    }
+  </script>
+
+
+  <div id="popup_container"></div>
+   <!-- Modal windows ----------------------------------------------------------------->
+  {% raw %}
+  <script id="dvigatel-popup-template" type="text/x-handlebars-template">
+
+    <div class="modal" id="engineModal_one" tabindex="-1" role="dialog" aria-labelledby="engineModal" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="vertical-alignment-helper">
+          <div class="modal-dialog vertical-align-center">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title">{{name}}</h4>
+                <button class="close" type="button" data-dismiss="modal" aria-label="close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="container">
+                  <div class="row">
+    
+                    <div id="photoDescription" class="col-md-6 col-xs-12">
+                        <img src="assets/img/kpp/{{img}}" alt="{{name}}" class="img-thumbnail" />
+                    </div>
+                    
+                    <div id="description" class="col-md-6 col-xs-12">
+                      <!-- <h2>{{name}}</h2> -->
+                      <table class="table">
+                          <tr>
+                              <td colspan="2">
+                                <a href="javascript:" onclick="show_dvigatel_popup({{id}});" class="nal-link" data-toggle="modal">
+                                  <span style="font-size:1.4em;">
+                                    {{ name }}
+                                  </span></a>
+                                  <span style="color:gray;float: right;">{{ model }} </span>
+                              </td>
+                            </tr>
+                            {{#if price1 }}
+                            <tr>
+                              <td>{{ price1_n }}</td>
+                              <td style="width:25%;text-align: right;"><span style="text-align: right;">{{ price1 }}р.</span></td>
+                            </tr>
+                            {{/if}}
+                    
+                            {{#if price2 }}
+                            <tr>
+                              <td>{{ price2_n }}</td>
+                              <td style="text-align: right;"><span>{{ price2 }}р.</span></td>
+                            </tr>
+                            {{/if}}
+                    
+                            {{#if price3 }}
+                            <tr>
+                              <td>{{ price3_n }}</td>
+                              <td style="text-align: right;"><span>{{ price3 }}р.</span></td>
+                            </tr>
+                            {{/if}}
+                    
+                            {{#if prim }}
+                            <tr>
+                              <td colspan="2"> для {{ prim }} </td>
+                            </tr>
+                            {{/if}}
+                    
+                            <tr>
+                              <td colspan="2" style="font-size: 92%;">{{ desc }} 
+                
+                              {{#if url }}
+                                <a href="/kamaz-inf/korobki-peredach-kpp/{{ url }}.html"> подробнее... </a>
+                                
+                              {{/if}}
+                            </td>
+                            </tr>
+
+                            <tr>
+                                <td colspan="2">
+                                    <strong>Запросить предложение</strong>
+                                    <div class="" style="float: right;"> <a href="tel:+78552783500" class="color_unset" >(8552) 78-35-00</a></div>
+                                  </td>            
+                              </tr>
+                            <tr>
+                                <td colspan="2">
+                                    
+                                    <div class="form-group form-inline text-right" id='default-suggestions_popup'>
+                            
+                                        <input type="tel" class="form-control form-inline" id="input_contact_popup" placeholder="ваш телефон или email"
+                                        name="phone" required autocomplete="tel" style="margin-bottom: 5px;"
+                                        onchange="$('#btnSend_popup').addClass('btn-primary');$('#btnSend_popup').removeClass('btn-link');">
+                                        &nbsp;&nbsp;&nbsp;
+                                        <a id="request_comment_link_popup" href="javascript:"
+                                          onclick="$('#request_comment_link_popup').addClass('hidden'); $('#request_comment_popup').removeClass('hidden');"
+                                          class="small" style=" color: darkslategrey;"> комментарий </a>
+                                          &nbsp;&nbsp;&nbsp;
+                                        <textarea id="request_comment_popup" class="form-control hidden" placeholder="комментарий"
+                                          rows="3"></textarea>
+                                          <a href="javascript:" id="btnSend_popup" onclick='send_request("{{name}} ", $("#input_contact_popup").val(), $("#request_comment_popup").val()); $("#engineModal_one").modal("hide");' class="btn btn-sm btn-link "
+                                          style=" text-decoration: underline;">отправить</a>
+                                      </div>
+                                     
+                                  
+                                  </td>
+                                  </tr>
+                      </table>
+                    </div>
+                  </div>
+                 
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </script>
+  {% endraw %}
+
+
+  
+  <section id="catalog" class="section-padding">
+    <div class="container text-center">
+      <div class="section-header text-center">
+          <p> <img src="/assets/img/kpp/kamaz_kpp_01.jpg" alt="КПП КамАЗ"/> </p>
+      </div>
+      </div>
+    </section>
+
+
+  <!-- РАЗДАТКИ -------------------------------------------->
+  <!-- <section id="catalog" class="section-padding">
+    <div class="container text-center">
+      <div class="section-header text-center">
+        <h1 class="section-title ">Раздаточные коробки КамАЗ</h1>
+        <div class="shape wow fadeInDown"></div>
+      </div>
+      <div class="row" id="models_container1">
+
+      </div>
+
+     
+    </div>
+
+  </section> -->
+
+
+{% include advantages.html %}
+
+{% include napravlenia.html %}

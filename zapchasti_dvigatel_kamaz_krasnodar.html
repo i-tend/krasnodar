@@ -1,0 +1,453 @@
+---
+layout: default_main
+title: Запчасти на двигатель КамАЗ в Краснодаре в наличии - Челныагрегатцентр 
+description: Оригинальные блоки цилиндров, коленвалы, шатуны ПАО КамАЗ в наличии в Краснодаре, с оперативной доставкой под заказ.
+metakeywords: запчасти камаз 
+---
+
+  <!-- Header Area wrapper Starts -->
+  <header id="header-wrap">
+    <div class="head h-100">
+      <div class="head__inner h-100">
+        <!-- Navbar Start -->
+        <nav class="navbar navbar-expand-lg bg-inverse fixed-top scrolling-navbar">
+          <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <a href="/" class="navbar-brand" style="display: contents; max-width:60%;">ЧелныАгрегатЦентр - Краснодар</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+              aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+              <i class="lni-menu"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+              <ul class="navbar-nav mr-auto w-100 justify-content-end clearfix" id="top-submenu">
+                <li class="nav-item active">
+                  <a class="nav-link" href="javascript:" onclick="$('html, body').animate({ scrollTop: 0}, 600);">
+                    Начало
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#catalog">
+                    Каталог
+                  </a>
+                </li>
+
+                 <!-- задняя часть меню подгружается  -->
+                 {% include top-submenu.html %}
+                 
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <!-- Navbar End -->
+
+        <!-- Hero Area Start -->
+        <div id="hero-area" class="hero-area-bg">
+          <div class="container w-100">
+            <div class="row">
+              <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                <div class="contents">
+                  <ul>
+                    <li style="margin-bottom:0px;">
+                      <h1 class="title text-left w-100">Запчасти к двигателям КамАЗ </h1>
+                    </li>
+                    <li style="margin-top:0px;">
+                      <h2 class="title w-100">со склада в Краснодаре </h2>
+                    </li>
+                    <li>&nbsp;</li>
+                    <li><i class="lni-check-mark-circle"></i>&nbsp;&nbsp;Быстрая доставка под заказ</li>
+                    <li><i class="lni-check-mark-circle"></i> &nbsp;&nbsp;10 лет на рынке</li>
+                    <li><i class="lni-check-mark-circle"></i> &nbsp;&nbsp;Полноценная гарантия со справедливыми условиями</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="col-md-4 col-xs-12 text-right">
+                  {% capture data_group %}
+                    ["Блок ", "Вал ", "Гильза-", "Насос ", "Шатун "]
+                  {% endcapture %}
+                  {% capture data_list %}
+                    ["Блок цилиндров дв. 740.10/7403.10","Блок цилиндров ЕВРО 1,2 ЯЗДА","Блок цилиндров ЕВРО 2,3 Bosch","Вал коленчатый КАМАЗ ДВС .10/7403","Вал коленчатый КАМАЗ Евро-1","Вал коленчатый КАМАЗ Евро-2 .31","Вал коленчатый КАМАЗ Евро-2 .30","Вал коленчатый КАМАЗ Евро-2 50/51","Вал коленчатый КАМАЗ Евро-3","Вал коленчатый КАМАЗ Евро-3","Вал коленчатый КАМАЗ Евро-3","Гильза-палец-поршень-кольца (ЦПГ)","Гильза-палец-поршень-кольца (ЦПГ)","Гильза-палец-поршень-кольца (ЦПГ)","Шатун","Насос водяной КАМАЗ","Насос водяной КАМАЗ-ЕВРО","Насос водяной КАМАЗ ЕВРО-2"]
+                  {% endcapture %}
+                  {% include header_zakaz.html list=data_list group=data_group %}
+              </div>        
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Hero Area End -->
+
+  </header>
+
+  <section id="catalog" class="section-padding">
+    <div class="container">
+        <div class="text-center justify-content-center">
+            <div class="section-header">
+                <h1 class="section-title">Запчасти к двигателям КамАЗ </h1>
+                <div class="shape wow fadeInDown"></div>
+                <!-- <div>Сайт находится в разработке. Цены уточняйте по телефону. </div> -->
+            </div>
+        </div>
+        
+        <div class="row">
+          <p> <hr> </p>
+          
+          <!--  каталог -->
+          <!-- <div class="clearfix"></div> -->
+            {% for item in site.data.dvigatels_zap %}
+            <div class="engine col-md-6 col-lg-6 col-xs-12">
+              <div class="row">
+                <div class="col-md-12 text-left">
+                  <a href="/kamaz-inf/motor_zapchasti/{{ item.url }}.html">
+                    <span style="font-size:1.2em;"> 
+                        <!-- show_item_popup({{item.id}}); -->
+                      &nbsp;•&nbsp; {{ item.name }}
+                    </span></a>
+                </div>
+                <div class="col-md-4">
+                  <a href="/kamaz-inf/motor_zapchasti/{{ item.url }}.html" >
+                    <img src="/assets/img/dvigatels_zapchasti/{{item.img}}" alt="{{item.name}}" class="img-thumbnail" style="border: none;" />
+                  </a>
+                </div>
+                <div class="col-md-8">
+                  <table class="table-card-sm text-left">
+                    {%- if item.model and item.model != "" -%}
+                    <tr>
+                      <td colspan="2">
+                        <span style="color:gray;float: right;">{{ item.model }} </span>
+                      </td>
+                    </tr>
+                    {%- endif -%}
+
+                    {%- if item.price1 and item.price1 != "" -%}
+                    <tr>
+                      <td>{{ item.price1_n }}</td>
+                      <td style="width:28%;text-align: right;"><span style="text-align: right;">{{ item.price1 }}</span>
+                      </td>
+                    </tr>
+                    {%- endif -%}
+            
+                    {%- if item.price2  and item.price2 != "" -%}
+                    <tr>
+                      <td>{{ item.price2_n }}</td>
+                      <td style="text-align: right;"><span>{{ item.price2 }}</span></td>
+                    </tr>
+                    {%- endif -%}
+            
+                    {%- if item.price3 and item.price3 != "" -%}
+                    <tr>
+                      <td>{{ item.price3_n }}</td>
+                      <td style="text-align: right;"><span>{{ item.price3 }}</span></td>
+                    </tr>
+                    {%- endif -%}
+
+                    {%- if item.price4 and item.price4 != "" -%}
+                    <tr>
+                      <td>{{ item.price4_n }}</td>
+                      <td style="text-align: right;"><span>{{ item.price4 }}</span></td>
+                    </tr>
+                    {%- endif -%}
+            
+                    
+                    {%- if item.prim_dvigatel and item.prim_dvigatel != "" -%}
+                    <tr>
+                      <td colspan="2"> для двигателей {{ item.prim_dvigatel }} </td>
+                    </tr>
+                    {%- endif -%}
+
+                    {%- if item.prim and item.prim != "" -%}
+                    <tr>
+                      <td colspan="2"> на {{ item.prim }} </td>
+                    </tr>
+                    {%- endif -%}
+            
+                    <tr>
+                      <td colspan="2" style="font-size: 92%;">{{ item.desc }}
+            
+                        {%- if item.url and item.url != "" -%}
+                          <a class="btn btn-default" href="/kamaz-inf/motor_zapchasti/{{ item.url }}.html" style="font-size: 100%;"> подробнее... </a>
+                        {%- endif -%}
+                      </td>
+                    </tr>
+                  </table>
+            
+            
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+        
+            <!-- <div style="clear: both;"></div> -->
+          </div>
+              
+          <div class="row">
+            
+            <div class="section-header text-center w-100">
+              <!-- <h2 class="section-title ">Описание </h2>
+              <div class="shape wow fadeInDown"></div> -->
+            
+            </div>
+            
+            
+            
+            <div class="row text-left articles">
+              <div class="col-md-1"></div>
+              <div class="col-md-10 text-left">
+                <p>ЧелныАгрегатЦентр предлагает к продаже запчасти, которые
+                  используются для сборки на конвейере КАМАЗ, что гарантирует высокое качество.</p> <br>
+            
+
+                  {% include kupite_u_nas.html %}
+                    
+              </div>
+            </div>
+
+
+
+        
+        </div>  <!-- row -->
+
+        <div class="row justify-content-center">
+          <div class="col-md-1"></div>
+            <div class="col-md-10">
+              <div class="w-100 text-center">
+                  <h2>Прайс-лист</h3>
+              </div>
+            
+
+            <table class="table" style="width:unset; border-collapse: collapse;">
+              <colgroup>
+                <!-- <col style="width: 96pt;" width="128">
+                <col style="width: 282pt;" width="376">
+                <col style="width: 64pt;" width="85"> -->
+              </colgroup>
+              <tbody>
+                <tr>
+                  <td style="text-align: center;background-color: #e6e6e6;" colspan="3">
+                    <strong id='blocki'>Блоки цилиндров производства
+                        завода ОАО КАМАЗ</strong></td>
+                </tr>
+                <tr>
+                  <td>740.21-1002012-20</td>
+                  <td>Блок цилиндров КАМАЗ (на моторы 740,7403)&nbsp;Б/У Р0 на гарантии</td>
+                  <td>45 000р</td>
+                </tr>
+                <tr>
+                  <td>740.21-1002012-20</td>
+                  <td>Блок цилиндров КАМАЗ (на моторы 740,7403) 2018</td>
+                  <td>145 000р</td>
+                </tr>
+                <tr>
+                  <td>740.21-1002012-21</td>
+                  <td>Блок цилиндров КАМАЗ (моторы 740,7403) с распредвалом</td>
+                  <td>149 500р</td>
+                </tr>
+                <tr>
+                  <td>740.21-1002012</td>
+                  <td>Блок цилиндров КАМАЗ-ЕВРО ЯЗДА</td>
+                  <td>150 000р</td>
+                </tr>
+                <tr>
+                  <td>740.21-1002012-10</td>
+                  <td>Блок цилиндров КАМАЗ-ЕВРО ЯЗДА/Bosch</td>
+                  <td>150 600р</td>
+                </tr>
+                <tr>
+                  <td>740.21-1002012(-10)</td>
+                  <td>Блок цилиндров КАМАЗ-ЕВРО ЯЗДА/Bosch Б/У Р0</td>
+                  <td>75 000р</td>
+                </tr>
+                <tr>
+                  <td style="text-align: center;background-color: #e6e6e6;" colspan="3" height="21">
+                    <strong id='valy'>Вал коленчатый, производство ПАО КАМАЗ</strong></td>
+                </tr>
+                <tr>
+                  <td>740.13-1005008-23</td>
+                  <td>Вал коленчатый КАМАЗ (дв.740/7403) новый Р1/Р0</td>
+                  <td>50 700р</td>
+                </tr>
+                <tr>
+                  <td>740.13-1005008-20</td>
+                  <td>Вал коленчатый КАМАЗ (дв.740/7403)</td>
+                  <td>92 000р</td>
+                </tr>
+                <tr>
+                  <td>740.13-1005008-03</td>
+                  <td>Вал коленчатый КАМАЗ ЕВРО 1 (моторы 740.11/13) новый Р1/Р0</td>
+                  <td>50 000р</td>
+                </tr>
+                <tr>
+                  <td>740.13-1005008</td>
+                  <td>Вал коленчатый КАМАЗ ЕВРО 1 (моторы 740.11/13)</td>
+                  <td>84 100р</td>
+                </tr>
+                <tr>
+                  <td>740.30-1005008-03</td>
+                  <td>Вал коленчатый КАМАЗ ЕВРО 2 (мотор 740.30)&nbsp;новый Р1/Р0</td>
+                  <td>50 500р</td>
+                </tr>
+                <tr>
+                  <td>740.30-1005008</td>
+                  <td>Вал коленчатый КАМАЗ ЕВРО 2 (мотор 740.30)</td>
+                  <td>88 000р</td>
+                </tr>
+                <tr>
+                  <td>740.13-1005008-13</td>
+                  <td>Вал коленчатый КАМАЗ ЕВРО 2 (мотор 740.31)&nbsp;новый Р1/Р0</td>
+                  <td>50 200р</td>
+                </tr>
+                <tr>
+                  <td>740.13-1005008-10</td>
+                  <td>Вал коленчатый КАМАЗ ЕВРО 2 (мотор 740.31)</td>
+                  <td>85 500р</td>
+                </tr>
+                <tr>
+                  <td>740.30-1005008-10</td>
+                  <td>Вал коленчатый КАМАЗ ЕВРО 2 (Автобус)</td>
+                  <td>88 000р</td>
+                </tr>
+                <tr>
+                  <td>740.50-1005008-03</td>
+                  <td>Вал коленчатый КАМАЗ ЕВРО 2 (моторы 740.51/740.62) новый Р1/Р0</td>
+                  <td>55 000р</td>
+                </tr>
+                <tr>
+                  <td>740.50-1005008</td>
+                  <td>Вал коленчатый КАМАЗ ЕВРО 2 (моторы 740.51/50)</td>
+                  <td>92 200р</td>
+                </tr>
+                <tr>
+                  <td>740.62-1005008-03</td>
+                  <td>Вал коленчатый КАМАЗ ЕВРО 3 (дв.60/61/62/63) новый Р1/Р0</td>
+                  <td>55 000р</td>
+                </tr>
+                <tr>
+                  <td>740.62-1005008</td>
+                  <td>Вал коленчатый КАМАЗ ЕВРО 3 (дв.60/61/62/63)</td>
+                  <td>95 000р</td>
+                </tr>
+                <tr>
+                  <td>740.65-1005008</td>
+                  <td>Вал коленчатый КАМАЗ ЕВРО 3 (дв.740.65)</td>
+                  <td>100 100р</td>
+                </tr>
+
+                <tr>
+                    <td style="text-align: center;background-color: #e6e6e6;" colspan="3" height="21">
+                      <strong id='drugie'>Другие детали двигателя. Цены уточняйте по телефону !</strong></td>
+                  </tr>
+
+
+                <tr>
+                    <td>740.1000128</td>
+                    <td>ЦПГ (Гильза, палец, поршень, кольца) к-т на 740.10/7403</td>
+                    <td>3400р</td>
+                  </tr>
+                  <tr>
+                    <td>740.30-1000128-05/07</td>
+                    <td>ЦПГ (Гильза, палец, поршень, кольца) к-т на евро 1/2</td>
+                    <td>5850р</td>
+                  </tr>
+                  <tr>
+                    <td>740.60-1000128-05</td>
+                    <td>ЦПГ (Гильза, палец, поршень, кольца) к-т на евро 2/3</td>
+                    <td>6200 р</td>
+                  </tr>
+                  <tr>
+                    <td>740.1004045</td>
+                    <td>Шатун, шт</td>
+                    <td>4200р</td>
+                  </tr>
+                  <tr>
+                    <td>740.1003010-20</td>
+                    <td>Головка блока цилиндров в сборе 740</td>
+                    <td>5500р</td>
+                  </tr>
+                  <tr>
+                    <td>740.30-1003010</td>
+                    <td>Головка блока цилиндров в сборе евро</td>
+                    <td>5500р</td>
+                  </tr>
+                  <tr>
+                    <td>740.1307010-02</td>
+                    <td>Насос водяной</td>
+                    <td>5680р</td>
+                  </tr>
+                  <tr>
+                    <td>740.13-1307010</td>
+                    <td>Насос водяной евро</td>
+                    <td>7050р</td>
+                  </tr>
+                  <tr>
+                    <td>740.50-1307010</td>
+                    <td>Насос водяной евро</td>
+                    <td>3950р</td>
+                  </tr>
+                  <tr>
+                    <td>740.63-1307010</td>
+                    <td>Насос водяной евро</td>
+                    <td>6230р</td>
+                  </tr>
+                  <tr>
+                    <td>740.1011010-02</td>
+                    <td>Насос масляный с шестерней в сборе</td>
+                    <td>7270р</td>
+                  </tr>
+                  <tr>
+                    <td>740.11-1011010</td>
+                    <td>Насос масляный евро с шестерней в сборе</td>
+                    <td>7070р</td>
+                  </tr>
+                  <tr>
+                    <td>740.1006015-04</td>
+                    <td>Вал распределительный</td>
+                    <td>4591р</td>
+                  </tr>
+                  <tr>
+                    <td>740.21-1006015</td>
+                    <td>Вал распределительный евро</td>
+                    <td>6100р</td>
+                  </tr>
+                  <tr>
+                    <td>740.1005115-91</td>
+                    <td>Маховик СБ</td>
+                    <td>7320р</td>
+                  </tr>
+                  <tr>
+                    <td>7405.1005115-2</td>
+                    <td>Маховик евро СБ</td>
+                    <td>8540р</td>
+                  </tr>
+                  <tr>
+                    <td>740.30-1005115</td>
+                    <td>Маховик евро под лепестковую корзину СБ</td>
+                    <td>14680р</td>
+                  </tr>
+
+              </tbody>
+            </table>
+
+            <div class="alert alert-info">
+                Перечислены только основные модели. Звоните - если не нашли нужную.<br>
+                Мы продаём карданные валы на всю грузовую технику. Прайс-лист пришлем по запросу.
+            </div>
+
+           
+
+          </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="catalog" class="section-padding">
+    <div class="container text-center">
+      <div class="section-header text-center">
+          <p> <img src="/assets/img/dvigatels_zapchasti/kamaz_dvigatel_blok_01.jpg" alt="Запчасти КамАЗ Блок цилиндров"/> </p>
+      </div>
+      </div>
+    </section>
+
+{% include advantages.html %}
+
+{% include napravlenia.html %}

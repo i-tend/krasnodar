@@ -1,0 +1,243 @@
+---
+layout: default_main
+title: Кабины КамАЗ | Челны Агрегат Центр
+description: Продажа и ремонт кабин КамАЗ по всей России 
+metakeywords: кабины камаз Челны Агрегат Центр  
+---
+
+  <!-- Header Area wrapper Starts -->
+  <header id="header-wrap">
+    <div class="head h-100">
+      <div class="head__inner h-100">
+        <!-- Navbar Start -->
+        <nav class="navbar navbar-expand-lg bg-inverse fixed-top scrolling-navbar">
+          <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <a href="/" class="navbar-brand" style="display: contents; max-width:60%;">ЧелныАгрегатЦентр - Краснодар</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+              aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+              <i class="lni-menu"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+              <ul class="navbar-nav mr-auto w-100 justify-content-end clearfix" id="top-submenu">
+                <li class="nav-item active">
+                    <a class="nav-link" href="javascript:" onclick="$('html, body').animate({ scrollTop: 0}, 600);" >
+                        Начало
+                      </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#catalog">
+                    Каталог
+                  </a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="#pricing">
+                    Цены
+                  </a>
+                </li>
+                <!-- задняя часть меню подгружается  -->
+                {% include top-submenu.html %}
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <!-- Navbar End -->
+
+        <!-- Hero Area Start -->
+        <!-- Hero Area Start -->
+        <div id="hero-area" class="hero-area-bg">
+          <div class="container w-100">
+            <div class="row">
+              <div class="col-md-8 col-xs-12">
+                <div class="contents">
+                  <ul>
+                    <li style="margin-bottom:0px;">
+                      <h1 class="title text-left w-100">Продажа, ремонт кабин КАМАЗ</h1>
+                    </li>
+                    <li style="margin-top:0px;">
+                      <h2 class="title w-100">с гарантией</h2>
+                    </li>
+                    <li>&nbsp;</li>
+                    <li><i class="lni-check-mark-circle"></i>&nbsp;&nbsp;Быстрая доставка под заказ</li>
+                    <li><i class="lni-check-mark-circle"></i>&nbsp;&nbsp;Больной опыт - более 10 лет на рынке</li>
+                    <li><i class="lni-check-mark-circle"></i> &nbsp;&nbsp;Гарантия на кабины и работы</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="col-md-4 col-xs-12 text-right">
+                {% capture data_group %}
+                  [""]
+                {% endcapture %}
+
+                {% capture data_list %}
+                  [""]
+                {% endcapture %}
+                
+                {% include header_zakaz.html list=data_list group=data_group %}
+              </div>
+
+              <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 text-right">
+                          
+                
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Hero Area End -->
+
+  </header>
+
+  <section id="catalog" class="section-padding">
+    <div class="container text-center">
+      <div class="section-header text-center">
+        <h2 class="section-title ">Кабины КамАЗ</h2>
+        <div class="shape wow fadeInDown"></div>
+      </div>
+      <div class="row" id="models_container">
+        <!-- Services item -->
+        <div class="col-lg-4" style="margin-bottom: 100px">
+          <div class="cabin-item">
+            <div class="cabin-item__img">
+              <img src="/assets/img/cabins/53205-5000011.jpg" alt="">
+            </div>
+            <div class="cabin-item__text text-center" style="">
+              <h4>Кабина КАМАЗ-53205 (без сп.м, выс)</h4>
+              <h5>Артикул:53205-5000011</h5>
+              <h5>359.000р.</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4" style="margin-bottom: 100px">
+          <div class="cabin-item">
+            <div class="cabin-item__img">
+              <img src="/assets/img/cabins/54105-5000011.jpg" alt="">
+            </div>
+            <div class="cabin-item__text text-center" style="">
+              <h4>Кабина КАМАЗ-54105 (со сп.м, выс)</h4>
+              <h5>Артикул:54105-5000011</h5>
+              <h5>359.000р.</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4" style="margin-bottom: 100px">
+          <div class="cabin-item">
+            <div class="cabin-item__img">
+              <img src="/assets/img/cabins/5014335963.jpg" alt="">
+            </div>
+            <div class="cabin-item__text text-center" style="">
+              <h4>Кабина КАМАЗ-6520 (без сп.м, выс)</h4>
+              <h5>Артикул:6520-5099520</h5>
+              <h5>359.000р.</h5>
+            </div>
+          </div>
+        </div>
+        <div class="section-header text-center">
+          <h2 class="section-title ">Цены на кабины КамАЗ</h2>
+          <div class="shape wow fadeInDown"></div>
+        </div>
+        <div class="col-12">
+          <div class="cabins">
+            <table>
+              <tr class="bg-gray1">
+                <td>Артикул</td>
+                <td>Наименование</td>
+                <td>Новый, завод "КАМАЗ" </td>
+                <td>Выполняем кап.ремонт при заводе.</td>
+              </tr>
+              <tr>
+                <td>53205-5000011</td>
+                <td>Кабина КАМАЗ-53205 (без сп.м, выс)</td>
+                <td>300.000</td>
+                <td>от 185 000</td>
+              </tr>
+              <tr >
+                <td>54105-5000011</td>
+                <td>Кабина КАМАЗ-54105 (со сп.м, выс)</td>
+                <td>359.000</td>
+                <td>от 200 000</td>
+              </tr>
+              <tr>
+                <td>6520-5099520</td>
+                <td>Кабина КАМАЗ-6520 (без сп.м, выс)</td>
+                <td>428 910</td>
+                <td>запрос</td>
+              </tr>
+              <tr>
+                <td>5410-5000011</td>
+                <td>Кабина КАМАЗ 5410 (без сп.м низ)</td>
+                <td>348 711</td>
+                <td>от 210 000</td>
+              </tr>
+              <tr>
+                <td>5511-5000011</td>
+                <td>Кабина КАМАЗ 5320 (без сп.м, низ)</td>
+                <td>256 087</td>
+                <td>от 180 000</td>
+              </tr>
+              <tr >
+                <td>6520-5099506</td>
+                <td>Кабина КАМАЗ 6520 (без сп.м торпеда старого образца)</td>
+                <td>400 482</td>
+                <td>от 240 000</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>Кабина КАМАЗ 53205 (без сп.м, выс)</td>
+                <td>215 000 руб.</td>
+                <td>100 000</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+
+          </div>
+        </div>
+      </div>
+      <div class="container" style="padding-top:40px;">
+        <div class="row">
+          <div class="col-1"></div>
+          <div class="col-10 text-left">
+            Автомобили КАМАЗ, вне всяких сомнений, являются лучшими русскими грузовыми автомобилями. Эти машины доказали
+            свою состоятельность и при жесточайших условиях эксплуатации в России, и во время участия в гонке
+            Париж-Дакар.<br><br>
+
+            За десятилетия использования грузовые техника КАМАЗ зарекомендовали себя с самой лучшей стороны. Она
+            относительно дешевы, надежны, неприхотливы и ремонтопригодны.<br><br>
+
+            Кабина КАМАЗАа- это одно из самыз уязвимых частей. Кабины КАМАЗ созданы
+            таким образом, чтобы их можно было легко и быстро заменить с минимальными затратами сил и средств.<br><br>
+
+            Замена кабины может потребоваться по многим разным причинам. Как правило, менять кабину
+            необходимо после серьезного дорожно-транспортного происшествия или для того, чтобы повысить комфорт
+            водителя.<br><br>
+
+            Лучше всего купить кабину КАМАЗ по недорогой цене в компании Челны Агрегат Центр, которая вот уже 8 лет
+            продает кабины выполненные по заводским технологиям, а сборка из заводских комплектующих.<br><br>
+
+           
+            <div class="row text-left articles">
+                <div class="col-md-1"></div>
+                <div class="col-md-10" id="kupite">  
+                  {% include kupite_u_nas.html %}
+                </div>
+            
+
+            <div class="w-100 text-center">
+              <a href="#" class="btn btn-lg btn-primary"> Запросить предложение </a> 
+            </div>
+
+          </div>
+        </div>
+      </div>
+  </section>
+
+  
+  {% include advantages.html %}
+
+  {% include napravlenia.html %}

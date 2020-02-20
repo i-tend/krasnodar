@@ -1,0 +1,263 @@
+---
+layout: default_main
+title: Запчасти КамАЗ в Краснодаре в наличии - Челныагрегатцентр
+description: Поставляем запчасти КамАЗ в наличии и под заказ.  Быстрая доставка по Краснодарскому краю. Стоимость, прайс, комплектация заявок.
+metakeywords: краснодар запчасти КАМАЗ евро купить, продажа, цена, стоимость
+---
+
+  <!-- Header Area wrapper Starts -->
+  <header id="header-wrap">
+    <div class="head h-100">
+      <div class="head__inner h-100">
+        <!-- Navbar Start -->
+        <nav class="navbar navbar-expand-lg bg-inverse fixed-top scrolling-navbar">
+          <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <a href="/" class="navbar-brand" style="display: contents; max-width:60%;">ЧелныАгрегатЦентр - Краснодар</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+              aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+              <i class="lni-menu"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+              <ul class="navbar-nav mr-auto w-100 justify-content-end clearfix" id="top-submenu">
+                <li class="nav-item active">
+                  <a class="nav-link scroll-link" href="#hero-area">
+                    Начало
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#catalog">
+                    Каталог
+                  </a>
+                </li>
+               
+                <li class="nav-item">
+                  <a class="nav-link" href="#pricing">
+                    Цены
+                  </a>
+                </li>
+               <!-- задняя часть меню подгружается  -->
+               {% include top-submenu.html %}
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <!-- Navbar End -->
+
+        <!-- Hero Area Start -->
+        <div id="hero-area" class="hero-area-bg">
+          <div class="container w-100">
+            <div class="row">
+              <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                <div class="contents">
+                  <ul>
+                    <li style="margin-bottom:0px;">
+                      <h1 class="title text-left w-100">Комплектуем заявки на запчасти КамАЗ</h1>
+                    </li>
+                    <li style="margin-top:0px;">
+                      <h2 class="title w-100">со склада в Краснодаре и Наб.Челнах </h2>
+                    </li>
+                    <li>&nbsp;</li>
+                    <li><i class="lni-check-mark-circle"></i>&nbsp;&nbsp;Экспертные знания рынка запчастей КамАЗ</li>
+                    <li><i class="lni-check-mark-circle"></i>&nbsp;&nbsp;10 лет на рынке </li>
+                    <li><i class="lni-check-mark-circle"></i>&nbsp;&nbsp;Быстрая доставка под заказ</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 text-right">
+                <div class="contents_2">
+                  <h3 class="title" style='padding-bottom: 0px;margin-bottom: -5px;'><span style="color:lightgray">8
+                    </span><a href="tel:+78552443713" class="color_unset" >(8552) 78-35-00</a> </h3>
+                  <a href="mailto:agregat-16@yandex.ru" id="header_open_call" class="small">agregat-16@yandex.ru </a>
+                </div>
+                <br />
+                <form action="" style="width: 240px;float: right;">
+
+                  <div class="form-group " id='default-suggestions'>
+                    <div class="title" style="color:lightgray; padding-bottom:1em;">запросить предложение</div>
+
+                    <input type="tel" class="form-control" id="input_contact" placeholder="ваш телефон или email"
+                      name="phone" required autocomplete="tel"
+                      onchange="$('#btnSend').addClass('btn-primary');$('#btnSend').removeClass('btn-outline-primary');">
+                    <input class="typeahead form-control" type="text" placeholder="укажите модель" id="select">
+                    <a id="request_comment_link" href="javascript:"
+                      onclick="$('#request_comment_link').addClass('hidden'); $('#request_comment').removeClass('hidden');"
+                      class="small" style="color:lightgray;">добавить комментарий </a>
+                    <textarea id="request_comment" class="form-control hidden" placeholder="комментарий"
+                      rows="3"></textarea>
+                  </div>
+                  <input id="btnSend" onclick="send_request( $('#select').val(), $('#input_contact').val(), $('#request_comment').val());" class="btn btn-sm btn-outline-primary" type="button"
+                    value="отправить">
+
+                  <!-- script для typeahaed  -->
+                  <script>
+                    // происходит только после загрузки 
+                    $(document).ready(function () {
+                      // присваивает переменной спец.объект, в котором можно задать правила чтения данных, в том числе JSON.
+                      var dvigatels = new Bloodhound({
+                        datumTokenizer: Bloodhound.tokenizers.whitespace,
+                        queryTokenizer: Bloodhound.tokenizers.whitespace,
+                        // prefetch: 'models.json'
+                        local: ["Блок цилиндров дв. 740.10/7403.10","Блок цилиндров ЕВРО 1,2 ЯЗДА","Блок цилиндров ЕВРО 2,3 Bosch","Вал коленчатый КАМАЗ ДВС .10/7403","Вал коленчатый КАМАЗ Евро-1","Вал коленчатый КАМАЗ Евро-2 .31","Вал коленчатый КАМАЗ Евро-2 .30","Вал коленчатый КАМАЗ Евро-2 50/51","Вал коленчатый КАМАЗ Евро-3","Вал коленчатый КАМАЗ Евро-3","Вал коленчатый КАМАЗ Евро-3","Гильза-палец-поршень-кольца (ЦПГ)","Гильза-палец-поршень-кольца (ЦПГ)","Гильза-палец-поршень-кольца (ЦПГ)","Шатун","Насос водяной КАМАЗ","Насос водяной КАМАЗ-ЕВРО","Насос водяной КАМАЗ ЕВРО-2",]
+                      });
+                      // фнукция которая будет выполняться - когда нужна подстановка
+                      function dvigatelsWithDefaults(q, sync) {
+                        // если текст не был набран - покажет список по-умолчанию
+                        if (q === '') {
+                          sync(["Блок цилиндров дв. 740.10/7403.10","Блок цилиндров ЕВРО 1,2 ЯЗДА","Блок цилиндров ЕВРО 2,3 Bosch"]);
+                        }
+                        // если был набран текст - поищет
+                        else {
+                          dvigatels.search(q, sync);
+                        }
+                      }
+                      // привязываем в нужном нам input - функционал typeahead c определенным настройками
+                      $('#default-suggestions .typeahead').typeahead({
+                        minLength: 0,
+                        highlight: true
+                      },
+                        {
+                          name: 'dvigatels',
+                          source: dvigatelsWithDefaults // если здесь указать просто переменную dvigatels - будет просто подсказка по набранному, 
+                          // а у нас стоит спец.функция, которая может указать
+                        });
+                    });
+                 
+                  </script>
+
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Hero Area End -->
+  </header>
+
+
+
+  
+  <!-- Запчасти КамАЗ -->
+  <section id="catalog" class="section-padding">
+    <div class="container text-center">
+      <div class="section-header text-center">
+        <h2 class="section-title">Комплектация заявок по запчастям для КамАЗ</h2>
+        <div class="shape wow fadeInDown"></div>
+      </div>
+      <div class="row text-left articles">
+          <div class="col-md-1"></div>
+          <div class="col-md-10">
+
+          <div class="alert alert-success" style="font-size: 20px;">
+              Благодаря огромному опыту и знакомству с большинством производителей -
+              мы можем скомплектовать заявки любой сложности и отправить их в кратчайшие сроки.
+          </div>
+            
+          <div class="alert alert-info" style="font-size: 20px;">
+              Мы всегда подберем запчасти на грузовики КамАЗ максимально подходящие Вам по соотношению цена-качество-ресурс:
+              оригинал или качественный аналог. 
+              <br>Мы предоставляем гарантию на все запчасти, купленные у нас.
+              <br>Рассматриваем заявки от 25 тыс.руб.
+          </div>
+
+       <p>&nbsp;</p>
+             
+      
+
+       <h3>Какие виды запчастей бывают</h3>
+       <p>
+          - <b>Оригинальные автозапчасти КамАЗ</b> с официальной торговой знаком "KAMAZ",
+          выпускаемые ПАО "КАМАЗ" и предприятиями-смежниками, официальными поставщиками. На продукцию наносится пломбировочный
+          ярлык со случайным кодом, который можно проверить по телефону или через интернет.
+          На подобные запчасти КАМАЗ цены выше в 1,5-2 раза стоимости недорогих аналогов от малоизвестных брендов.
+          При этом покупатель получает гарантию и уверенность, что купленные детали точно соответствуют типоразмерам и эксплуатационным требованиям завода-изготовителя.
+       </p>
+       <p>
+          - <b>Неоригинальные автозапчасти</b> - изделия независимых компаний-производителей, специализирующихся на выпуске
+          деталей определенной группы для различных марок и моделей автомобилей. 
+          Такие запчасти могут выпускаться как под собственной торговой маркой производителя.
+          Некоторые неоригинальные запчасти могут иметь ресурс намного больше оригинала. 
+       </p>
+       <p>
+          - <b>Гаражные запасные части</b> - созданы зачастую без соблюдения технических норм, используемые материалы не согласуется с ГОСТами.
+          Покупка таких запчастей неопытным заказчиком - лотерея.
+          Такие запчасти стоит покупать только по рекомендации опытных специалистов, имевших опыт использования.
+       </p>
+       <p>
+          - <b>Восстановленные агрегаты</b> подразделяются на 2 подгруппы:<br> 
+          1) от гаражников, которые при реставрировании агрегатов, не следят за качеством, делают хороший внешний вид
+          и хотят продать побыстрее. Обычно они продают их через объявления и рекламные сайты. <br>
+          2) Зарекомендовавшие себя фирмы, использующие профессиональное оборудование и новые оригинальные запчасти для восстановления.
+          Может быть восстановлено до 95% ресурса агрегата. 
+          <br>
+          Разница между ними обычно видна в цене. 
+       </p>
+
+       <p>&nbsp;</p>        
+       <p>&nbsp;</p>        
+        <p><strong>Почему лучше купить у нас :</strong></p>
+
+        <table class="table w-100">
+            <tbody>
+              <tr>
+                <td><i class="lni-check-mark-circle"></i></td>
+                <td> Мы предоставляем гарантию на все реализованные запчасти. 
+                </td>
+              </tr>
+              <tr>
+                <td><i class="lni-check-mark-circle"></i></td>
+                <td>Доступные цены и высокое качество товара. Cкидки постоянным клиентам.</td>
+              </tr>
+              <tr>
+                <td><i class="lni-check-mark-circle"></i></td>
+                <td> Быстрая доставка покупки в нужный город.<br> Доставка в отдельные города осуществляется бесплатно.</td>
+              </tr>
+            </tbody>
+          </table>
+
+        <p><strong>Чтобы сделать заявку необходимо: </strong></p>
+        <table class="table w-100">
+          <tbody>
+              <tr>
+                <td><i class="lni-check-mark-circle"></i></td>
+                <td> Прислать заявку и реквизиты на электронную почту <span><a
+                      href="mailto:agregat-16@yandex.ru">agregat-16@yandex.ru</a></span>. </td>
+              </tr>
+              <tr>
+              <td><i class="lni-check-mark-circle"></i></td>
+              <td> Позвонить по телефону <strong><a href="tel:+78552443713" class="color_unset" >(8552) 78-35-00</a></strong> <br>
+                при это Вам следует уточнить: - параметры цена/качество, желаемых поставщиков, необходимые сроки и условия.
+              </td>
+            </tr>
+            <tr>
+                <td><i class="lni-check-mark-circle"></i></td>
+                <td> 
+                    Мы подбираем список запчастей по качеству, производителю и цене.
+                    Проработанная заявка отправляется Вам на электронный адрес в виде счета на оплату. 
+                    После подтверждения обеих сторон, заказ комплектуется.
+                </td>
+              </tr>
+
+            <tr>
+              <td><i class="lni-check-mark-circle"></i></td>
+              <td> Доставка осуществляется транспортными перевозчиками, либо нашими силами. <br>
+                Перед оплатой Вы сможете осмотреть и проверить заявку на пункте доставки <br>
+            </tr>
+          </tbody>
+        </table>
+
+        <img src="/assets/img/reductor/kamaz_reductor_01.jpg" alt="Редукторы КамАЗ"/>
+
+
+      </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  {% include advantages.html %}
+
+  {% include napravlenia.html %}

@@ -1,0 +1,376 @@
+---
+layout: default_main
+title: Редукторы КамАЗ в Краснодаре, заднего среднего переднего моста 5320 65115 43118 4308 6520 с 48 49 46 47 50 зубьями, в наличии с доставкой по России - Челныагрегатцентр 
+description: Поставки редукторов. Главная передача автомобиля КамАЗ в наличии в Краснодаре. Описание редукторов, их отличия и особенности. Виды фланцев и передаточные числа. Стоимость, цена, доставка в регионы России.
+metakeywords: Редуктор купить, продажа, цена, стоимость
+---
+
+    <!-- Header Area wrapper Starts -->
+    <header id="header-wrap">
+        <div class="head h-100">
+            <div class="head__inner h-100">
+                <!-- Navbar Start -->
+                <nav class="navbar navbar-expand-lg bg-inverse fixed-top scrolling-navbar">
+                    <div class="container">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <a href="/" class="navbar-brand" style="display: contents; max-width:60%;">ЧелныАгрегатЦентр - Краснодар</a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                            data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <i class="lni-menu"></i>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarCollapse">
+                            <ul class="navbar-nav mr-auto w-100 justify-content-end clearfix" id="top-submenu">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="javascript:"
+                                        onclick="$('html, body').animate({ scrollTop: 0}, 600);">
+                                        Начало
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#catalog">
+                                        Каталог
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#pricing">
+                                        Цены
+                                    </a>
+                                </li>
+                                <!-- задняя часть меню подгружается  -->
+                                {% include top-submenu.html %}
+                            </ul>
+                        </div>
+                    </div>
+
+                   
+
+                </nav>
+                <!-- Navbar End -->
+
+                <!-- Hero Area Start -->
+                <div id="hero-area" class="hero-area-bg">
+                    <div class="container w-100">
+                        <div class="row">
+                            <div class="col-md-8 col-xs-12">
+                                <div class="contents">
+                                    <ul>
+                                        <li style="margin-bottom:0px;">
+                                            <h1 class="title text-left w-100">Редукторы КамАЗ 4310 5320 53205 6520</h1>
+                                        </li>
+                                        <li style="margin-top:0px;">
+                                            <h2 class="title w-100">со склада в Краснодаре  </h2>
+                                        </li>
+                                        <li>&nbsp;</li>
+                                        <li><i class="lni-check-mark-circle"></i> &nbsp;&nbsp;от 32'000 руб. !
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; в Краснодаре</li>
+                                            <li><i class="lni-check-mark-circle"></i>&nbsp;&nbsp;Быстрая доставка под заказ</li>
+                                            <li><i class="lni-check-mark-circle"></i>&nbsp;&nbsp;10 лет на рынке </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 col-xs-12 text-right">
+                                {% capture data_group %}
+                                    ["Редуктор передний ", "Редуктор средний ", "Редуктор задний "]
+                                {% endcapture %}
+                                {% capture data_list %}
+                                    ["Редуктор передний 4310-2302010", "Редуктор передний 43114-2302010", "Редуктор средний 4310-2502010", "Редуктор средний 43114-2502010", "Редуктор средний с МОД 5320-2502010", "Редуктор средний с МОД 53205-2502010", "Редуктор средний с МОД и МКБ 53205-2502011", "Редуктор задний 5320-2402010", "Редуктор задний 53205-2402010", "Редуктор задний МКБ 53205-2402011", "Редуктор задний МКБ 43253-2402011", "Редуктор задний 395 395-02.00.00", "Редуктор задний 43081-2402011-20", "Редуктор задний 43081-2402009-30", "Редуктор задний 6520 6520-2402011", "Редуктор средний 6520 6520-2502011"]
+                                {% endcapture %}
+                                {% include header_zakaz.html list=data_list group=data_group %}
+                            </div>  
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="catalog" class="section-padding">
+        <div class="container text-center">
+
+            <div class="container text-center">
+                <div class="section-header text-center">
+                    <h2 class="section-title ">Каталог редукторов КамАЗ</h2>
+                    <div class="shape wow fadeInDown"></div>
+                </div>
+               
+                <div class="row" id="models_container">
+                    <!-- Services item -->
+                    
+                    <div class="clearfix"></div>
+                    {% for item in site.data.reductor %}
+                    <div class="engine col-md-6 col-lg-6 col-xs-12">
+                        <div class="row">
+                            <div class="col-md-12 text-left">
+                                <a href="/kamaz-inf/reduktor/{{ item.url }}.html" >
+                                    <span style="font-size:1.2em;">
+                                        &nbsp;•&nbsp;{{ item.name }}
+                                    </span></a>
+                            </div>
+                            <div class="col-md-4">
+                                <a href="/kamaz-inf/reduktor/{{ item.url }}.html" >
+                                    <img src="/assets/img/reductor/{{item.img}}" alt="{{item.name}}" class="img-thumbnail"
+                                        style="border: none;" />
+                                </a>
+                            </div>
+                            <div class="col-md-8">
+                                <table class="table-card-sm text-left">
+                                    <tr>
+                                        <td colspan="2">
+                    
+                                            <span style="color:gray;float: right;">{{ item.model }} </span>
+                                        </td>
+                                    </tr>
+                                    {%- if item.price1 != "" -%}
+                                    <tr>
+                                        <td>{{ item.price1_n }}</td>
+                                        <td style="width:28%;text-align: right;"><span style="text-align: right;">{{ item.price1 }}</span>
+                                        </td>
+                                    </tr>
+                                    {%- endif -%}
+                    
+                                    {%- if item.price2 != "" -%}
+                                    <tr>
+                                        <td>{{ item.price2_n }}</td>
+                                        <td style="text-align: right;"><span>{{ item.price2 }}</span></td>
+                                    </tr>
+                                    {%- endif -%}
+                    
+                                    {%- if item.price3  != "" -%}
+                                    <tr>
+                                        <td>{{ item.price3_n }}</td>
+                                        <td style="text-align: right;"><span>{{ item.price3 }}</span></td>
+                                    </tr>
+                                    {%- endif -%}
+
+                                    {%- if item.price4  != "" -%}
+                                    <tr>
+                                        <td>{{ item.price4_n }}</td>
+                                        <td style="text-align: right;"><span>{{ item.price4 }}</span></td>
+                                    </tr>
+                                    {%- endif -%}
+                    
+                                    {%- if item.zubya != "" -%}
+                                    <tr>
+                                        <td colspan="2"> зубьев {{ item.zubya }} </td>
+                                    </tr>
+                                    {%- endif -%}
+                    
+                    
+                                    {%- if item.prim -%}
+                                    <tr>
+                                        <td colspan="2"> для {{ item.prim }} </td>
+                                    </tr>
+                                    {%- endif -%}
+                    
+                                    <tr>
+                                        <td colspan="2" style="font-size: 92%;">{{ item.desc }}
+                    
+                                            {%- if item.url -%}
+                                            <a href="/kamaz-inf/reduktor/{{ item.url }}.html"> подробнее... </a>
+                    
+                                            {%- endif -%}
+                                        </td>
+                                    </tr>
+                                </table>
+                    
+                    
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                    
+                    <div style="clear: both;"></div>
+                    <div>
+                        <p></p>
+                    </div>
+                    <div class="section-header text-center">
+                        <h2 class="section-title ">Редукторы КамАЗ</h2>
+                        <div class="shape wow fadeInDown"></div>
+                        
+                    </div>
+                    
+                    
+                    <div class="row text-left articles">
+                        <div class="col-md-1"></div>
+                        <div class="col-md-10 text-left">
+                            <p>Редукторы КАМАЗ необходимы для того, чтобы преобразовывать и передавать крутящий момент от
+                                двигателя к
+                                колесам автомобиля. От надежности редуктора зависит надежность всего грузового автомобиля в
+                                целом.<br>
+                    
+                                Купить редукторы КамАЗ можно в компании ЧелныАгрегатЦентр. 
+                                ЧелныАгрегатЦентр предлагает к продаже редукторы, индивидуальной сборки из деталей которые
+                                используются для сборки на конвейере КамАЗ.</p> <br>
+                    
+                                <img src="/assets/img/reductor/kamaz_reductor_01.jpg" alt="Редукторы КамАЗ"/>
+                            
+                            <h3>Каталожный номер. Разбор обозначения редуктора</h3>
+                    
+                    
+                            <p><b>Редуктор КАМАЗ</b> в каталоге определяется более точно, как <strong>«передача главная моста»</strong>.
+                            </p>
+                    
+                            <p></p>
+                            <br>
+                            <span class="border">&nbsp;&nbsp;&nbsp;
+                                <b>5320</b>-2402010-10
+                            </span>
+                            <br>
+                            <p>В номенклатурном номере первое число означает модель автомобиля КАМАЗ, но учитите, что
+                                редуктор с номером 5320 подходит также и для других моделей.
+                                <br /> Если вы сомневаетесь в выборе редуктора, то лучше позвоните к нам, и мы с удовольствием поможем
+                                выбрать нужный редуктор.</p>
+                            <br>
+                            <span class="border">&nbsp;&nbsp;&nbsp;
+                                5320-<b>240</b>2010-10
+                            </span>
+                            <br>
+                            <p>Первые три цифры в середине означают тип редуктора, а следующие четыре - наличие межколесной
+                                блокировки.</p>
+                            <p>
+                                240 - редуктор заднего моста<br>
+                                250 - редуктор среднего моста<br>
+                                230 - редуктор переднего моста</p>
+                    
+                            <br>
+                            <span class="border">&nbsp;&nbsp;&nbsp;
+                                5320-240<b>2010</b>-10
+                            </span>
+                            <br>
+                            <p>
+                                2010 – редуктор без межколесной блокировки (без МКБ)<br>
+                                2011 – редуктор с межколесной блокировкой (с МКБ)
+                            </p>
+                    
+                            <br>
+                            <span class="border">&nbsp;&nbsp;&nbsp;
+                                5320-2402010-<b>10</b>
+                            </span>
+                            <br>
+                    
+                            <p>Последние две цифры указывают на количество зубьев:</p>
+                    
+                            <p> 10 - 49/13<br>
+                                20 - 50/12<br>
+                                30 - 48/14<br>
+                                40 - 47/15<br>
+                                60 - 46/16
+                            </p>
+                    <p></p>
+                    <img src="/assets/img/reductor/kamaz_reductor_remont_01.jpg" alt="Редукторы КамАЗ"/>
+                    <p></p>
+
+                    <strong>Типичные поломки:</strong>
+                            <p>
+                                <b>Средний мост грузовика вибрирует.</b> При небольшой вибрации возможно дело в подшипниках. Необходимо проверить и
+                                заменить подшипники, как фланца межосевого дифференциала, так и фланца заднего моста.
+                                <br>
+                                <b>Задний мост грузовика отказывается работать.</b> Самая распространенная причина такого дефекта - выход из строя
+                                заднего редуктора. Но и при выходе из строя дифференциала задний мост тоже может не работать.
+                                <br>
+                                <b>Возникновение трещин на мосту КамАЗ.</b> Причина этого дефекта - большие перегрузки. Трещина на мосту может
+                                возникнуть и из-за ударов по картеру. В случаях серьезных дефектов картера его лучше заменить.
+                                <br>
+                                <b>Задний мост грузовика «воет».</b> Скорее всего, износились подшипники и шестерни редуктора, которые подлежат
+                                замене.
+                            </p>
+                            <p class="text-right">
+                                <a href="/kamaz-inf/reduktor_article/index.html" class="btn btn-primary "style="font-size: 1.0em;"> Доп. информация об редукторах </a>
+                            </p>
+                            
+
+                            <p><br></p>
+                    
+                            {% include kupite_u_nas.html %}
+                    
+                        </div>
+                    </div>
+
+
+
+                    
+                    
+                </div>
+
+    </section>
+
+
+    <script>
+        var mods;
+        $.getJSON("/data/reductor.json", function (json) {
+            mods = json;
+            if (mods == null || mods.length == 0) return;
+        });
+        function show_dvigatel_popup(id) {
+            var source = document.getElementById("dvigatel-popup-template").innerHTML;
+            var template = Handlebars.compile(source);
+            if (mods == null || mods.length == 0) return;
+            var rez = mods.find(x => x.id == id);
+            if (rez != null) {
+                var html = template(rez);
+                $("#popup_container").html("");
+                $("#popup_container").append(html);
+                $('#engineModal_one').modal('show');
+            }
+        }
+    </script>
+
+
+    <div id="popup_container"></div>
+    <!-- Modal windows -------------------------->
+  
+
+    {% include advantages.html %}
+
+
+    <section id="pricing22" class="section-padding  bg-gray">
+        <div class="container text-center justify-content-center">
+            <div class="section-header">
+                <h2>Цены на редукторы КамАЗ 4310 5320 53205 6520</h2>
+                <div class="shape shape wow fadeInDown"></div>
+            </div>
+
+
+            <div class="reductor col-12 text-left" style="background-color: lightblue; font-weight: 600;  border: 1px solid rgb(184, 184, 184);">
+                    <div class="name" style="width: 55%; ">
+                        Наименование
+                    </div>
+                    <div class="price1 text-center" style="width: 15%; ">
+                        Новый, ПАО КамАЗ, гар.1год
+                    </div>
+                    <div class="price2 text-center" style="width: 15%;">
+                        Аналог Н.Челны, гар.1год
+                    </div>
+                    <div class="price3 text-center" style="width: 15%; ">
+                        Кап. ремонт, гар.6мес.
+                    </div>
+                </div>
+            {% for item in site.data.reductor %}
+                <div class="reductor col-12 text-left"
+                    style="padding-top: 3px; padding-bottom: 3px; border-bottom: 1px solid rgb(184, 184, 184);">
+                    <div class="name" style="width: 55%; ">
+                        {{ item.name }}<br> <small> {{ item.model }}, зубьев: {{item.zubya}}</small>
+                    </div>
+                    <div class="price1 text-center" style="width: 15%; ">
+                        {{item.price1}}
+                    </div>
+                    <div class="price2 text-center" style="width: 15%;">
+                        {{item.price2}}
+                    </div>
+                    <div class="price3 text-center" style="width: 15%; ">
+                        {{item.price3}}
+                    </div>
+                </div>
+            {% endfor %}
+
+
+
+            </div>
+            
+    </section>
+
+
+    {% include napravlenia.html %}

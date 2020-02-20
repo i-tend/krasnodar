@@ -1,0 +1,171 @@
+{% assign product = site.data.dvigatel | where:"url", page.page_url | first  %}
+
+
+
+
+<div>
+    <a href="/dvigatel_kamaz.html#catalog" class="btn btn-link" style="padding-top: 0px; margin-top: -30px;">
+      < каталог двигателей </a> 
+  </div>
+  <div class="row">
+        <div id="photoDescription" class="col-md-5 col-xs-12">
+          <img src="/assets/img/dvigatels/{{product.img}}" srcset="/assets/img/dvigatels/{{product.img}}"
+            alt="{{product.name}}" title="{{product.name}}" class="" style="max-width:100%;" itemprop="contentUrl" />
+        </div>
+  
+        <div id="description" class="col-md-7 col-xs-12">
+          <!-- <h2>{{name}}</h2> -->
+          <table class="table">
+            <tr>
+              <td colspan="2"><span style="font-size:1.4em;">
+                {{ product.name }} 
+              </span></td>
+            </tr>
+            {%- if product.model != "" -%}
+              <tr> <td colspan="2" style="text-align: right;"> {{ product.model }} </td> </tr>
+            {%- endif -%}
+  
+            {%- if include.page_url and include.page_url != "" -%}
+            <tr> <td colspan="2" style="text-align: right;">  
+              <a href="/kamaz-inf/motor/{{ product.url }}.html" class="btn btn-primary"> Полное описание двигателя... </a> </td> </tr>
+            {%- endif -%}
+  
+            {%- if product.price1 != "" -%}
+            <tr>
+              <td>{{ product.price1_n }}</td>
+              <td style="text-align: right;"><span style="font-size:1.2em;">{{ product.price1 }}</span>&nbsp;</td>
+            </tr>
+            {%- endif -%}
+  
+            {%- if product.price2 != "" -%}
+            <tr>
+              <td>{{ product.price2_n }}</td>
+              <td style="text-align: right;"><span style="font-size:1.2em;">{{ product.price2 }}</span>&nbsp;</td>
+            </tr>
+            {%- endif -%}
+  
+            {%- if product.price3 != "" -%}
+            {%- if item.type == "cummins" -%}
+            <tr>
+              <td>{{ product.price3_n }}</td>
+              <td style="text-align: right;"><span style="font-size:1.2em;">{{ product.price3 }}</span>&nbsp;</td>
+            </tr>
+            {%- endif -%}
+            {%- endif -%}
+  
+              
+            {%- if product.prim != "" -%}
+            <tr>
+              <td colspan="2"> для {{ product.prim }} </td>
+            </tr>
+            {%- endif -%}
+  
+            {%- if product.power != "" -%}
+            <tr>
+              <td> Мощность двигателя: </td>
+              <td> <small>{{ product.power }}</small> </td>
+            </tr>
+            {%- endif -%}
+  
+            {%- if product.eco != "" -%}
+            <tr>
+              <td> Экологический класс: </td>
+              <td> <small>{{ product.eco }}</small> </td>
+            </tr>
+            {%- endif -%}
+  
+            {%- if product.toplivo != "" -%}
+            <tr>
+              <td> Топливная аппаратура: </td>
+              <td> <small>{{ product.toplivo }}</small> </td>
+            </tr>
+            {%- endif -%}
+  
+            {%- if product.turbo != "" -%}
+            <tr>
+              <td> Турбокомпрессор: </td>
+              <td> <small>{{ product.turbo }}</small> </td>
+            </tr>
+            {%- endif -%}
+  
+            {%- if product.kpp != "" -%}
+            <tr>
+              <td> КПП: </td>
+              <td> <small>{{ product.kpp }}</small> </td>
+            </tr>
+            {%- endif -%}
+  
+            <tr>
+              <td colspan="2"><small>{{ product.desc }} </small></td>
+            </tr>
+            <tr>
+              <td colspan="2">
+  
+                <strong> Запросить предложение</strong>
+                <div class="form-group form-inline text-right" id='default-suggestions_card'>
+  
+                  <input type="tel" class="form-control" id="input_contact_popup" placeholder="ваш телефон или email"
+                    name="phone" required autocomplete="tel" style="margin-bottom: 5px;"
+                    onchange="$('#btnSend_popup').addClass('btn-primary');$('#btnSend_popup').removeClass('btn-link');">
+                  &nbsp;&nbsp;&nbsp;
+                  <a id="request_comment_link_popup" href="javascript:"
+                    onclick="$('#request_comment_link_popup').addClass('hidden'); $('#request_comment_popup').removeClass('hidden');"
+                    class="small" style=" color: darkslategrey;"> комментарий </a>
+                  &nbsp;&nbsp;&nbsp;
+                  <textarea id="request_comment_popup" class="form-control hidden" placeholder="комментарий"
+                    rows="3"></textarea>
+                  <a href="javascript:" id="btnSend_popup"
+                    onclick='send_request("{{product.name}} ", $("#input_contact_popup").val(), $("#request_comment_popup").val()); $("#engineModal_one").modal("hide");'
+                    class="btn btn-sm btn-link" style=" text-decoration: underline;">отправить</a>
+  
+                </div>
+                <!-- ({{product.price1}}/{{product.price2}}/{{product.price3}} -->
+  
+              </td>
+            </tr>
+          </table>
+        </div>
+  </div>
+
+
+<div class="row">
+     <div class="col-md-1"></div>
+      <div class="col-md-10">
+        <div class="alert alert-info">
+          <table class="table">
+            <tr>
+              <td colspan="2">
+                <strong>Обратите внимание</strong><br>
+              </td>
+            </tr>
+            <tr>
+              <td><i class="lni-check-mark-circle"></i></td>
+              <td>
+                Мы продаем действительно новые двигатели {{ product.model }}, которые были
+                собраны на заводе из новых комплектующих.
+              </td>
+            </tr>
+            <tr>
+              <td><i class="lni-check-mark-circle"></i></td>
+              <td>
+                Нельзя сравнивать цены на новые двигатели с ценами на двигатели "с консервации" или
+                собранными "на собственных производствах".
+              </td>
+            </tr>
+            <tr>
+              <td><i class="lni-check-mark-circle"></i></td>
+              <td>
+                При выборе более дешевых «аналогов» - обязательно заключайте договор и внимательно знакомьтесь c
+                условиями
+                гарантии, проявляйте должную осмотрительность, чтобы не перечислить деньги фирме-однодневке и не
+                получить
+                проблемы с
+                вычетом НДС в будущем.
+              </td>
+            </tr>
+          </table>
+
+
+        </div>
+      </div>
+</div>

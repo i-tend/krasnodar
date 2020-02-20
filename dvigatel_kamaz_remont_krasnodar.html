@@ -1,0 +1,437 @@
+---
+layout: default_main
+title: Купить двигатель КамАЗ с кап.ремонта 740 и Cummins в Краснодаре  
+description: Челныагрегатцентр - поставщик двигателей КамАЗ в Краснодаре, с доставкой по всей России. Цена, описание, оперативная доставка.
+metakeywords: Двигатели КамАЗ 740 Cummins купить продажа цена стоимость новые оригинал
+---
+
+  <!-- Header Area wrapper Starts -->
+  <header id="header-wrap">
+    <div class="head h-100">
+      <div class="head__inner h-100">
+        <!-- Navbar Start -->
+        <nav class="navbar navbar-expand-lg bg-inverse fixed-top scrolling-navbar">
+          <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <a href="/" class="navbar-brand" style="display: contents; max-width:60%;">ЧелныАгрегатЦентр - Краснодар</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+              aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+              <i class="lni-menu"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+              <ul class="navbar-nav mr-auto w-100 justify-content-end clearfix" id="top-submenu">
+                <li class="nav-item active">
+                  <a class="nav-link" href="javascript:" onclick="$('html, body').animate({ scrollTop: 0}, 600);" >
+                    Начало
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link scroll-link" href="#catalog">
+                    Каталог
+                  </a>
+                </li>
+               
+                <li class="nav-item">
+                  <a class="nav-link scroll-link" href="#pricing">
+                    Цены
+                  </a>
+                </li>
+               <!-- задняя часть меню подгружается  -->
+               {% include top-submenu.html %}
+             
+              </ul>
+            </div>
+          </div>
+
+           
+        </nav>
+        <!-- Navbar End -->
+
+        <!-- Hero Area Start -->
+        <!-- Hero Area Start -->
+        <div id="hero-area" class="hero-area-bg">
+          <div class="container w-100">
+            <div class="row">
+              <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                <div class="contents">
+                  <ul>
+                    <li style="margin-bottom:0px;">
+                      <h1 class="title text-left w-100">Двигатели на технику КамАЗ - новые и кап.ремонт</h1>
+                    </li>
+                    <li style="margin-top:0px;">
+                      <h2 class="title w-100">со склада в Краснодаре  </h2>
+                    </li>
+                    <li>&nbsp;</li>
+                    <li><i class="lni-check-mark-circle"></i>&nbsp;&nbsp;Быстрая доставка под заказ</li>
+                    <li><i class="lni-check-mark-circle"></i>&nbsp;&nbsp;10 лет на рынке </li>
+                    <li><i class="lni-check-mark-circle"></i>&nbsp;&nbsp;В наличии в Краснодаре, Москве, Наб.Челнах</li>
+                    <li><i class="lni-check-mark-circle"></i> &nbsp;&nbsp;Гарантия на все агрегаты</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-4 col-xs-12 text-right">
+                {% capture data_group %}
+                  ["Двигатель ", "Двигатель Cummins "]
+                {% endcapture %}
+
+                {% capture data_list %}
+                ["Двигатель 740.10-210 (Евро-0)", "Двигатель 74009.10-403 (Урал)", "Двигатель 740.11-240 (Евро-1)", "Двигатель 7403.10-260 (Турбо)", "Двигатель 740.13-260 (Евро-1)",
+                  "Двигатель 740.30-260 (Евро-2)", "Двигатель 740.31-240 (Евро-2)", "Двигатель 740.50-360 (Евро-2-3)", "Двигатель 740.51-320 (Евро-2-3)", "Двигатель 740.62-280 (Евро-3)", "Двигатель Cummins 4ISBe 185", "Двигатель Cummins 6ISBe 210",
+                  "Двигатель Cummins 6ISBe 285", "Двигатель Cummins 6ISBe 300"]
+                {% endcapture %}
+                
+                {% include header_zakaz.html list=data_list group=data_group %}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Hero Area End -->
+
+  </header>
+  <!-- Header Area wrapper End -->
+
+
+  <!-- Каталог движков -->
+  <section id="catalog" class="section-padding">
+    <div class="container text-center">
+      <div class="section-header text-center">
+        <h2 class="section-title">Двигатели КамАЗ - каталог</h2>
+        <div class="shape wow fadeInDown"></div>
+        
+      </div>
+      <div class="row" id="models_container">
+        <!-- Сюда двигатели item -->
+        {% for item in site.data.dvigatel %}
+          <div class="engine col-md-6 col-xs-12">
+            <div class="row">
+              <div class="col-md-4">
+                <a href="#~" onclick="show_dvigatel_popup({{item.id}});" class="nal-link" data-toggle="modal">
+                  <img src="/assets/img/dvigatels/{{item.img}}" alt="{{item.name}}" class="img-thumbnail" style="border: none;" />
+                </a>
+                <span style="color:gray;float: right; font-size:0.85em; ">{{ item.model }}
+              </div>
+      
+              <div class="col-md-8">
+                <table class="table-card-sm text-left" style="">
+                  <tr>
+                    <td colspan="2">
+                      <a href="javascript:" onclick="show_dvigatel_popup({{item.id}});" class="nal-link" data-toggle="modal">
+                        <span style="font-size:1.3em; line-height: 1.5em;"> {{ item.name }} </span></a>
+                      </span>
+                    </td>
+                  </tr>
+                  {%- if item.price1 -%}
+                  <tr>
+                    <td>{{ item.price1_n }}</td>
+                    <td style="width:28%;text-align: right;"><span style="text-align: right;">{{ item.price1 }}р.</span></td>
+                  </tr>
+                  {%- endif -%}
+
+                  {%- if item.price2 -%}
+                  <tr>
+                    <td>{{ item.price2_n }}</td>
+                    <td style="text-align: right;"><span>{{ item.price2 }}р.</span></td>
+                  </tr>
+                  {%- endif -%}
+          
+                  {%- if item.price3 and item.price3 !=""  -%}
+                  <tr>
+                    <td>{{ item.price3_n }}</td>
+                    <td style="text-align: right;"><span>{{ item.price3 }}р.</span></td>
+                  </tr>
+                  {%- endif -%}
+
+                  {%- if item.price3 and item.price3 !=""  -%}
+                  <tr>
+                    <td>{{ item.price3_n }}</td>
+                    <td style="text-align: right;"><span>{{ item.price3 }}р.</span></td>
+                  </tr>
+                  {%- endif -%}
+
+                  {%- if item.price4 and item.price4 !=""  -%}
+                  <tr>
+                    <td>{{ item.price4_n }}</td>
+                    <td style="text-align: right;"><span>{{ item.price4 }}р.</span></td>
+                  </tr>
+                  {%- endif -%}
+          
+                  {%- if item.prim -%}
+                  <tr>
+                    <td colspan="2"> для {{ item.prim }} </td>
+                  </tr>
+                  {%- endif -%}
+          
+                  <tr>
+                    <td colspan="2" style="font-size: 100%;">{{ item.desc }}
+          
+                        {%- if item.url -%}
+                          <a href="/kamaz-inf/motor/{{ item.url }}.html" class="btn btn-primary"> подробнее... </a>
+                        {%- endif -%}
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+
+        {% endfor %}
+
+        
+      </div>
+      <div class="row text-left articles">
+          <div class="col-md-1"></div>
+          <div class="col-md-10">
+              
+          <p>
+            Мы продаём качественные двигатели с всеми документами и даем гарантию производителя. <br>
+            Остерегайтесь недобросовестных продавцов.
+        </p>
+       <p>&nbsp;&nbsp;</p>
+             
+       {% include kupite_u_nas.html %}
+
+
+              <p>Двигатель серии КамАЗ-740 имеет отличные технические характеристики, которые сделали его популярным не только
+                  на территории России, но и во всем мире.</p>
+      </div>
+      </div>
+    </div>
+  </section>
+
+
+  <script>
+    var mods;
+    $.getJSON("/data/dvigatel.json", function (json) {
+      mods = json;
+    });
+    function show_dvigatel_popup(id) {
+      var source = document.getElementById("dvigatel-popup-template").innerHTML;
+      var template = Handlebars.compile(source);
+      if (mods == null || mods.length == 0) return;
+      var rez = mods.find(x => x.id == id);
+      if (rez != null) {
+        var html = template(rez);
+        $("#popup_container").html("");
+        $("#popup_container").append(html);
+        $('#engineModal_one').modal('show');
+      }
+    }
+  </script>
+
+
+  <div id="popup_container"></div>
+  <!-- Modal windows --------------------------------------------------------------------->
+  {% raw %}
+  <script id="dvigatel-popup-template" type="text/x-handlebars-template">
+
+    <div class="modal" id="engineModal_one" tabindex="-1" role="dialog" aria-labelledby="engineModal" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="vertical-alignment-helper">
+          <div class="modal-dialog vertical-align-center">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title">{{name}}</h4>
+                <button class="close" type="button" data-dismiss="modal" aria-label="close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="container">
+                  <div class="row">
+                    <div id="photoDescription" class="col-md-5 col-xs-12">
+                        <img src="assets/img/dvigatels/{{img}}" alt="{{name}}" class="img-thumbnail" />
+                    </div>
+                    
+                    <div id="description" class="col-md-7 col-xs-12">
+                      <!-- <h2>{{name}}</h2> -->
+                      <table class="table">
+                        <tr>
+                          <td colspan="2">
+                            <a href="javascript:" onclick="show_dvigatel_popup({{id}});" class="nal-link" data-toggle="modal">
+                              <span style="font-size:1.4em;">
+                                {{ name }}
+                                <span style="color:gray;font-size:0.7em;">{{ model }} </span>
+                              </span></a>
+                            
+                          </td>
+                        </tr>
+                        {{#if price1 }}
+                        <tr>
+                          <td>{{ price1_n }}</td>
+                          <td style="width:25%;text-align: right;"><span style="text-align: right;">{{ price1 }}р.</span></td>
+                        </tr>
+                        {{/if}}
+                
+                        {{#if price2 }}
+                        <tr>
+                          <td>{{ price2_n }}</td>
+                          <td style="text-align: right;"><span>{{ price2 }}р.</span></td>
+                        </tr>
+                        {{/if}}
+                
+                        {{#if price3 and item.price3 !="" }}
+                          <tr>
+                            <td>{{ price3_n }}</td>
+                            <td style="text-align: right;"><span>{{ price3 }}р.</span></td>
+                          </tr>
+                        {{/if}}
+
+                        {%- if item.price4 and item.price4 !=""  -%}
+                        <tr>
+                          <td>{{ item.price4_n }}</td>
+                          <td style="text-align: right;"><span>{{ item.price4 }}р.</span></td>
+                        </tr>
+                        {%- endif -%}
+
+                        {{#if prim }}
+                        <tr>
+                          <td colspan="2"> для {{ prim }} </td>
+                        </tr>
+                        {{/if}}
+
+                        {{#if power }}
+                        <tr>
+                          <td> Мощность двигателя: </td>
+                          <td>{{power}}</td>
+                        </tr>
+                        <tr>
+                        {{/if}}
+<!-- 
+                        {{#if eco }}
+                          <td>
+                            Экологический класс:
+                          </td>
+                          <td>{{eco}}</td>
+                        </tr>
+                        {{/if}}
+
+
+                        {{#if toplivo }}
+                        <tr>
+                          <td>
+                            Топливная аппаратура:
+                          </td>
+                          <td>{{toplivo}}</td>
+                        </tr>
+                        {{/if}}
+
+                        
+                        {{#if turbo }}
+                        <tr>
+                          <td>
+                            Турбокомпрессор:
+                          </td>
+                          <td>{{turbo}}</td>
+                        </tr>
+                        {{/if}} -->
+
+                        {{#if kpp }}
+                        <tr>
+                          <td>
+                            Применяемость с КПП:
+                          </td>
+                          <td>{{kpp}}</td>
+                        </tr>
+                        {{/if}}
+
+                    
+
+                        <tr>
+                            <td colspan="2" style="font-size: 100%;">{{ desc }} 
+              
+                            {{#if url }}
+                              <a href="/kamaz-inf/motor/{{ url }}.html" class="btn btn-primary"> подробнее... </a>
+                              
+                            {{/if}}
+                          </td>
+                          </tr>
+
+
+                          <tr>
+                              <td colspan="2">
+                                  <strong>Запросить предложение</strong>
+                                  <div class="" style="float: right;" class="color_unset" > 8(8552) 78-35-00</div>
+                                </td>            
+                            </tr>
+                          <tr>
+                              <td colspan="2">
+                                  
+                                  <div class="form-group form-inline text-right" id='default-suggestions_popup'>
+                          
+                                      <input type="tel" class="form-control form-inline" id="input_contact_popup" placeholder="ваш телефон или email"
+                                      name="phone" required autocomplete="tel" style="margin-bottom: 5px;"
+                                      onchange="$('#btnSend_popup').addClass('btn-primary');$('#btnSend_popup').removeClass('btn-link');">
+                                      &nbsp;&nbsp;&nbsp;
+                                      <a id="request_comment_link_popup" href="javascript:"
+                                        onclick="$('#request_comment_link_popup').addClass('hidden'); $('#request_comment_popup').removeClass('hidden');"
+                                        class="small" style=" color: darkslategrey;"> комментарий </a>
+                                        &nbsp;&nbsp;&nbsp;
+                                      <textarea id="request_comment_popup" class="form-control hidden" placeholder="комментарий"
+                                        rows="3"></textarea>
+                                        <a href="javascript:" id="btnSend_popup" onclick='send_request("{{name}} ", $("#input_contact_popup").val(), $("#request_comment_popup").val()); $("#engineModal_one").modal("hide");' class="btn btn-sm btn-link "
+                                        style=" text-decoration: underline;">отправить</a>
+                                    </div>
+                                   
+                                
+                                </td>
+                                </tr>
+                        
+                      </table>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </script>
+  {% endraw %}
+
+
+
+
+
+
+  {% include advantages.html %}
+  
+
+
+  <section id="pricing" class="section-padding  bg-gray">
+    <div class="container text-center justify-content-center">
+        <p> <img src="/assets/img/dvigatels/remont/kamaz_dvigatel_remont_10.jpg" alt="Двигатели КамАЗ"/> </p>
+        <p> <img src="/assets/img/dvigatels/remont/kamaz_dvigatel_remont_14.jpg" alt="Двигатели КамАЗ"/> </p>
+        <p> <img src="/assets/img/dvigatels/remont/kamaz_dvigatel_remont_20.jpg" alt="Двигатели КамАЗ"/> </p>
+        <p> <img src="/assets/img/dvigatels/remont/kamaz_dvigatel_remont_24.jpg" alt="Двигатели КамАЗ"/> </p>
+        <p> <img src="/assets/img/dvigatels/remont/kamaz_dvigatel_remont_25.jpg" alt="Двигатели КамАЗ"/> </p>
+        <p> <img src="/assets/img/dvigatels/remont/kamaz_dvigatel_remont_52.jpg" alt="Двигатели КамАЗ"/> </p>
+        <p> <img src="/assets/img/dvigatels/remont/kamaz_dvigatel_remont_54.jpg" alt="Двигатели КамАЗ"/> </p>
+        <p></p>
+        <p></p>
+
+      <div class="section-header">
+        <h2>Прайс-лист двигатели КамАЗ</h2>
+        <div class="shape shape wow fadeInDown"></div>
+      </div>
+      
+      <div class="section-header">
+        <div class="about-area_1" style='overflow-x: scroll;'>
+           
+          
+          <a href="/assets/docs/Прайс ЧелныАгрегатЦентр 01 2019.xlsx" download=""> Скачать прайс-лист</a>
+         
+          
+      </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+  </section>
+
+
+  {% include napravlenia.html %}
