@@ -7,12 +7,12 @@
 {% assign product = site.data.reductor | where:"url", page_url | first  %}
  
  <div >
-    <a href="/reductor_kamaz.html#catalog" class="btn btn-link" style="padding-top: 0px; margin-top: -30px;"> < вернуться в каталог редукторов</a>
+    <a href="/reductor_kamaz_krasnodar.html#catalog" class="btn btn-link" style="padding-top: 0px; margin-top: -30px;"> < вернуться в каталог редукторов</a>
   </div>
 
    <div class="row">
       <div id="photoDescription" class="col-md-5 col-xs-12">
-        <img src="/assets/img/reductor/{{product.img}}" srcset="/assets/img/reductor/{{product.img}}" alt="{{product.name}}" title="{{product.name}}" class="" style="max-width:100%;"   itemprop="contentUrl"/>
+        <img src="https://chelnyagregatcentre.ru/assets/img/reductor/{{product.img}}" srcset="https://chelnyagregatcentre.ru/assets/img/reductor/{{product.img}}" alt="{{product.name}}" title="{{product.name}}" class="" style="max-width:100%;"   itemprop="contentUrl"/>
       </div>
 
       <div id="description" class="col-md-7 col-xs-12">
@@ -28,7 +28,7 @@
 
             {%- if include.page_url and include.page_url != "" -%}
             <tr> <td colspan="2" style="text-align: right;">  
-              <a href="/kamaz-inf/reduktor/{{ product.url }}.html" class="btn btn-primary"> Полное описание редуктора... </a> </td> </tr>
+              <a href="https://chelnyagregatcentre.ru/kamaz-inf/reduktor/{{ product.url }}.html" class="btn btn-primary"> Полное описание редуктора... </a> </td> </tr>
             {%- endif -%}
 
             {%- if product.price1 != "" -%}
